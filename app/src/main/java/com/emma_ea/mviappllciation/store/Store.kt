@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
  * @param[reducer] transforms current state with action into new state for screen
  */
 
-open class Store<S: State, A: Action>(
+class Store<S: State, A: Action>(
     initialState: S, private val reducer: Reducer<S, A>) {
 
     private val _state = MutableStateFlow(initialState)
